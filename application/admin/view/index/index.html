@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>博客后台</title>
+
+<link rel="stylesheet" href="__STATIC__/admin/css/index.css" type="text/css" media="screen">
+<link rel="shortcut icon" type="image/x-icon" href="__STATIC__/admin/icon/favicon.ico">
+<script type="text/javascript" src="__STATIC__/admin/js/jquery.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/tendina.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
+
+</head>
+<body>
+    <!--顶部-->
+    <block name="header">
+    <div class="layout_top_header">
+            <div style="float: left"><span style="font-size: 16px;line-height: 45px;padding-left: 20px;color: #8d8d8d">博客管理后台</span></div>
+            <div id="ad_setting" class="ad_setting">
+                <a class="ad_setting_a" href="javascript:;">
+                    <i class="icon-user glyph-icon" style="font-size: 20px"></i>
+                    <span>管理员</span>
+                    <i class="icon-chevron-down glyph-icon"></i>
+                </a>
+                <ul class="dropdown-menu-uu" style="display: none" id="ad_setting_ul">
+                    <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-user glyph-icon"></i> 个人中心 </a> </li>
+                    <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-cog glyph-icon"></i> 设置 </a> </li>
+                    <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-signout glyph-icon"></i> <span class="font-bold"><a href="{:url('login/dologin')}">退出</a></span> </a> </li>
+                </ul>
+            </div>
+    </div>
+    </block>
+    <!--顶部结束-->
+    <!--菜单-->
+    <block name="menu">
+    <div class="layout_left_menu">
+        <ul class="tendina" id="menu">
+            <li class="childUlLi">
+               <a href="#" target="menuFrame"><i class="glyph-icon icon-home"></i>首页</a>
+                <ul style="display: none;">
+                    <li><a href="#" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>用户添加</a></li>
+                </ul>
+            </li>
+            <li class="childUlLi">
+                <a href="#" target="menuFrame"> <i class="glyph-icon icon-reorder"></i>用户管理</a>
+                <ul style="display: none;">
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>管理员</a></li>
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>普通用户</a></li>
+                </ul>
+            </li>
+            <li class="childUlLi">
+                <a href="#" target="menuFrame"> <i class="glyph-icon icon-reorder"></i>角色管理</a>
+                <ul style="display: none;">
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>修改密码</a></li>
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>帮助</a></li>
+                </ul>
+            </li>
+             <li class="childUlLi">
+                <a href="#" target="menuFrame"> <i class="glyph-icon icon-reorder"></i>友链管理</a>
+                <ul style="display: none;">
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>友情链接</a></li>
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>帮助</a></li>
+                </ul>
+            </li>
+             <li class="childUlLi">
+                <a href="#" target="menuFrame"> <i class="glyph-icon icon-reorder"></i>评论管理</a>
+                <ul style="display: none;">
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>评论发表</a></li>
+                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>评论回复</a></li>
+                </ul>
+            </li>
+            <li class="childUlLi">
+                <a href="#"> <i class="glyph-icon  icon-location-arrow"></i>文章管理</a>
+                <ul style="display: none;">
+                    <li><a href="{:url('category/index')}" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>分类</a></li>
+                    <li><a href="{:url('article/index')}" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>文章</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--菜单-->
+    </block>
+    <block name="content">
+    <div id="layout_right_content" class="layout_right_content">
+        <div class="route_bg">
+            <a href="#">主页</a><i class="glyph-icon icon-chevron-right"></i>
+            <a href="#">菜单管理</a>
+        </div>
+        <div class="mian_content">
+            <div id="page_content">
+                <iframe id="menuFrame" name="menuFrame"  style="overflow:visible;" scrolling="yes" frameborder="no" height="100%" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+    </block>
+    <div class="layout_footer">
+        <p>Copyright © 2017 -</p>
+    </div>
+</body></html>

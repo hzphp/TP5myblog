@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分类管理</title>
+	<script type="text/javascript" src="__STATIC__/admin/js/jquery.js"></script>
+
+	<link rel="stylesheet" href="__STATIC__/admin/css/add.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="__STATIC__/admin/css/bootstrap.css" type="text/css" media="screen">
+</head>
+<body>
+	<h2 style="margin-bottom: 20px">分类管理</h2>
+	<a class="btn btn-primary" href="{:url('Category/add')}" style="margin-bottom: 20px;">添加分类</a>
+
+	<table class="table table-striped">
+		<tr>
+			<th>序号</th>
+			<th>分类名</th>
+			<th>创建时间</th>
+			<th>更新时间</th>
+			<th>管理</th>
+		</tr>
+{volist name="list" id="cate"}
+<tr>
+	<td>{$cate.id}</td>
+	<td>{$cate.cate_name}</td>
+	<td>{$cate.created_at}</td>
+	<td>{$cate.updated_at}</td>
+	<td>
+		<a href="{:url('Category/edit',['id'=>$cate['id']])}">编辑</a>
+		<a href="{:url('Category/del',['id'=>$cate['id']])}">删除</a>
+	</td>
+</tr>
+{/volist}
+	</table>
+	{$page}
+</body>
+</html>

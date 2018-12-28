@@ -1,0 +1,26 @@
+<div class="w_header">
+			<div class="container">
+				<div class="w_header_top">
+					<a href="#" class="w_logo"></a>
+					<span class="w_header_nav">
+					<ul>
+						<li><a href="{:url('Index/index',['id'=>''])}"  class="active">首页</a></li>
+						<li><a href="{:url('Category/index',['id'=>5])}">PHP</a></li>
+						<li><a href="{:url('Category/index',['id'=>4])}">Linux</a></li>
+						<li><a href="{:url('Category/index',['id'=>17])}">Redis</a></li>
+						<li><a href="{:url('Category/index',['id'=>7])}">web前端</a></li>
+						<li><a href="{:url('Category/index',['id'=>6])}">MySQL</a></li>
+						<li><a href="">留言</a></li>
+					</ul>
+				</span>
+					<div class="w_search">
+						<div class="w_searchbox">
+						<form action="{:url('Search/index')}" method="post">
+							<input type="text" placeholder="search" name="keyword" />
+							<button>搜索</button>
+						</form>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

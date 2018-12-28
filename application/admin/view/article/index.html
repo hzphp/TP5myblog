@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章管理</title>
+	<script type="text/javascript" src="__STATIC__/admin/js/jquery.js"></script>
+
+	<link rel="stylesheet" href="__STATIC__/admin/css/add.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="__STATIC__/admin/css/bootstrap.css" type="text/css" media="screen">
+</head>
+<body>
+	<h2>文章管理</h2>
+	<a class="btn btn-primary" href="{:url('Article/add')}">添加文章</a>
+
+	<form action="" method="get">
+		<input type="text" name="keywords">
+		<button type="submit">搜索</button>
+	</form>
+
+	<table class="table table-striped">
+		<tr>
+			<th>序号</th>
+			<th>分类名</th>
+			<th>用户名</th>
+			<th>标题</th>
+			<th>是否顶置</th>
+			<th>是否发表</th>
+			<th>创建时间</th>
+			<th>更新时间</th>
+			<th>管理</th>
+		</tr>
+{volist name="list" id="art"}
+<tr>
+	<td>{$art.id}</td>
+	<td>{$art.cate_name}</td>
+	<td>{$art.user_id}</td>
+	<td>{$art.title}</td>
+	<td>{$art.is_top}</td>
+	<td>{$art.is_publish}</td>
+	<td>{$art.created_at}</td>
+	<td>{$art.updated_at}</td>
+	<td>
+		<a href="{:url('Article/edit',['id'=>$art['id']])}">编辑</a>
+		<a href="{:url('Article/del',['id'=>$art['id']])}">删除</a>
+	</td>
+</tr>
+{/volist}
+</table>
+	{$page}
+</foreach>
+</body>
+</html>
